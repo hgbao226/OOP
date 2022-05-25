@@ -3,7 +3,7 @@
 int main()
 {
     srand(unsigned(time(NULL)));
-    Menu();
+    menu();
     system("pause");
     return 0;
 }
