@@ -2,6 +2,14 @@
 vector<int> a;
 vector<int> b;
 vector<int> c;
+int getMax(int A[], int n) {
+	int max = A[0];
+	for (int i = 0; i < n; i++) {
+		if (A[i] > max)
+			max = A[i];
+	}
+	return max;
+}
 void input1(int A[], int n)
 {
 	for (int i = 0; i < n; i++)
@@ -87,7 +95,7 @@ void chose(int A[])
 		}
 	} while (ch != 13);
 }
-void Menu()
+void menu()
 {
 	int A[50000];
 	int ch;
