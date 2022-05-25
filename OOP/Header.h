@@ -4,6 +4,7 @@
 #include <string>
 #include <cstdlib>
 #include <time.h>
+#include <vector>
 using namespace std;
 
 void BubbleSort(int A[], int n);
