@@ -3,8 +3,7 @@
 int main()
 {
     srand(unsigned(time(NULL)));
-    int A[50000];
-    setArrayAuto(A, 50000);
+    menu();
     system("pause");
     return 0;
 }
