@@ -1,5 +1,4 @@
 ﻿#include "Header.h"
-//trả về giá trị max trong mảng
 vector<int> a;
 vector<int> b;
 vector<int> c;
