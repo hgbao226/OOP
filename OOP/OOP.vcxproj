@@ -127,7 +127,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="bubble_sort.cpp" />
+    <ClCompile Include="couting_sort.cpp" />
+    <ClCompile Include="heap_sort.cpp" />
+    <ClCompile Include="insertion_sort.cpp" />
+    <ClCompile Include="marge_sort.cpp" />
     <ClCompile Include="OOP.cpp" />
+    <ClCompile Include="quick_sort.cpp" />
+    <ClCompile Include="radix_sort.cpp" />
+    <ClCompile Include="selection_sort.cpp" />
+    <ClCompile Include="Source.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Header.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
