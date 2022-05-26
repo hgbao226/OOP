@@ -42,11 +42,11 @@ void input_manual(int A[], int n)
 		arrCount++;
 	}
 	cout << "Mang da nhap: ";
-	for (int i = 0; i < n; i++) {
+	for (int i = 0; i < arrCount; i++) {
 		cout << A[i] << " ";
 	}
-	cout << endl << "Bam phim enter de tiep tuc";
-	system("pause");
+	cout << endl;
+	Sleep(5000);
 }
 void input_random(int A[], int n)
 {
@@ -56,25 +56,26 @@ void input_random(int A[], int n)
 		arrCount++;
 	}
 	cout << "Mang da nhap: ";
-	for (int i = 0; i < n; i++) {
+	for (int i = 0; i < arrCount; i++) {
 		cout << A[i] << " ";
 	}
-	cout << endl << "Bam phim enter de tiep tuc";
-	system("pause");
+	cout << endl;
+	Sleep(5000);
 }
 void input_from_file(int A[])
 {
 	ifstream ifs("data.txt");
-	for (int i = 0; i < 20000; i++)
+	for (int i = 0;!ifs.eof(); i++)
 	{
 		ifs >> A[i];
 		arrCount++;
 	}
 	ifs.close();
-	for (int i = 0; i < sizeof(A) / sizeof(A[0]); i++)
+	for (int i = 0; i < arrCount; i++) {
 		cout << A[i] << " ";
-	cout << endl << "Bam phim enter de tiep tuc";
-	system("pause");
+	}
+	cout << endl;
+	Sleep(5000);
 }
 void input(int A[])
 {
@@ -132,7 +133,8 @@ void chose(int A[])
 		case 10:
 		case 11:
 		case 12:
-			Bubble_Sort(A, arrCount);
+			Heap_Sort(A, arrCount);
+			output(A);
 		default:
 			break;
 		}

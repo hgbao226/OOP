@@ -17,11 +17,7 @@ void BubbleSortDE(int A[], int n)
         for (int j = 0; j < n - i - 1; j++)
             if (A[j] < A[j + 1]) {
                 swap(A[j], A[j + 1]);
-                cout << endl;
-                for (int k = 0; k < n; k++)
-                    cout << A[k] << " ";
-                Sleep(1000);
-                system("cls");
+                output(A);
             }
 }
 void Bubble_Sort(int A[], int n)

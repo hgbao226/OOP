@@ -21,11 +21,13 @@ void HeapSort(int A[], int n)
     for (int i = n / 2 - 1; i >= 0; i--)
     {
         heapify(A, n, i);
+        output(A);
     }
     for (int j = n - 1; j > 0; j--)
     {
         swap(A[j], A[0]);
         heapify(A, j, 0);
+        output(A);
     }
 }
 
@@ -78,5 +80,5 @@ void Heap_Sort(int A[], int n)
         default:
             break;
         }
-    } while (ch != 3);
+    } while (ch < 1 || ch > 2);
 }
