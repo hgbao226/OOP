@@ -11,7 +11,12 @@ void SelectionSort(int A[], int n)
             if (A[j] < A[min])  min = j;
         }
         swap(A[i], A[min]);
+        output(A);
+        Sleep(1000);
+        system("cls");
     }
+    cout << "Mang sau khi sap xep: ";
+    output(A);
 }
 void SelectionSortDE(int A[], int n)
 {
@@ -24,7 +29,14 @@ void SelectionSortDE(int A[], int n)
             if (A[j] > A[max])  max = j;
         }
         swap(A[i], A[max]);
+        cout << endl;
+        for (int k = 0; k < n; k++)
+            cout << A[k] << " ";
+        Sleep(1000);
+        system("cls");
     }
+    cout << "Mang sau khi sap xep: ";
+    output(A);
 }
 void Selection_Sort(int A[], int n)
 {

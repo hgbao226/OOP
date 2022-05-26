@@ -14,6 +14,11 @@ void InsertionSort(int A[], int n)
             j--;
         }
         A[j + 1] = p;
+        cout << endl;
+        for (int k = 0; k < n; k++)
+            cout << A[k] << " ";
+        Sleep(1000);
+        system("cls");
     }
 }
 void InsertionSortDE(int A[], int n)
@@ -30,6 +35,11 @@ void InsertionSortDE(int A[], int n)
             j--;
         }
         A[j + 1] = p;
+        cout << endl;
+        for (int k = 0; k < n; k++)
+            cout << A[k] << " ";
+        Sleep(1000);
+        system("cls");
     }
 }
 

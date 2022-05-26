@@ -2,17 +2,27 @@
 
 void BubbleSort(int A[], int n)
 {
-    for (int i = 0; i < n - 1; i++)
-        for (int j = 0; j < n - i - 1; j++)
-            if (A[j] > A[j + 1])
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (A[j] > A[j + 1]) {
                 swap(A[j], A[j + 1]);
+                
+            }
+        }
+    }
 }
 void BubbleSortDE(int A[], int n)
 {
     for (int i = 0; i < n - 1; i++)
         for (int j = 0; j < n - i - 1; j++)
-            if (A[j] < A[j + 1])
+            if (A[j] < A[j + 1]) {
                 swap(A[j], A[j + 1]);
+                cout << endl;
+                for (int k = 0; k < n; k++)
+                    cout << A[k] << " ";
+                Sleep(1000);
+                system("cls");
+            }
 }
 void Bubble_Sort(int A[], int n)
 {

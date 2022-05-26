@@ -10,7 +10,6 @@ void heapify(int A[], int n, int i)
         Max = left;
     if (right < n && A[left] < A[Max])
         Max = right;
-
     if (Max != i)
     {
         swap(A[i], A[Max]);

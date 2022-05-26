@@ -30,7 +30,7 @@
     <ClCompile Include="insertion_sort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="marge_sort.cpp">
+    <ClCompile Include="merge_sort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="quick_sort.cpp">

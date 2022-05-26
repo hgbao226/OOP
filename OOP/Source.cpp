@@ -1,7 +1,4 @@
 ﻿#include "Header.h"
-vector<int> a;
-vector<int> b;
-vector<int> c;
 int getMax(int A[], int n) {
 	int max = A[0];
 	for (int i = 0; i < n; i++) {
@@ -10,32 +7,48 @@ int getMax(int A[], int n) {
 	}
 	return max;
 }
-void input1(int A[], int n)
+void input_manual(int A[], int n)
 {
 	for (int i = 0; i < n; i++)
 	{
 		cout << "A[" << i << "]= ";
 		cin >> A[i];
-		a.push_back(A[i]);
+		arrCount++;
 	}
+	cout << "Mang da nhap: ";
+	for (int i = 0; i < n; i++) {
+		cout << A[i] << " ";
+	}
+	cout << endl << "Bam phim enter de tiep tuc";
+	system("pause");
 }
-void input2(int A[], int n)
+void input_random(int A[], int n)
 {
 	for (int i = 0; i < n; i++)
 	{
 		A[i] = rand() % 100000 + 0;
-		a.push_back(A[i]);
+		arrCount++;
 	}
+	cout << "Mang da nhap: ";
+	for (int i = 0; i < n; i++) {
+		cout << A[i] << " ";
+	}
+	cout << endl << "Bam phim enter de tiep tuc";
+	system("pause");
 }
-void input3(int A[])
+void input_from_file(int A[])
 {
 	ifstream ifs("data.txt");
 	for (int i = 0; i < 20000; i++)
 	{
 		ifs >> A[i];
-		c.push_back(A[i]);
+		arrCount++;
 	}
 	ifs.close();
+	for (int i = 0; i < sizeof(A) / sizeof(A[0]); i++)
+		cout << A[i] << " ";
+	cout << endl << "Bam phim enter de tiep tuc";
+	system("pause");
 }
 void input(int A[])
 {
@@ -51,25 +64,29 @@ void input(int A[])
 		case 1:
 			cout << "Nhap so phan tu cua day: ";
 			cin >> n;
-			input1(A, n);
+			input_manual(A, n);
 			break;
 		case 2:
 			cout << "Nhap so phan tu cua day: ";
 			cin >> n;
-			input2(A, n);
+			input_random(A, n);
 			break;
 		case 3:
-			input3(A);
+			input_from_file(A);
 			break;
 		default:
 			break;
 		}
-	} while (ch != 4);
+	} while (ch < 1 || ch > 4);
 }
 void chose(int A[])
 {
-	int ch;
-
+	int ch = 0;
+	int chSpeed = 0;
+	do {
+		cout << "Chon toc do thuc hien thuat toan\n1. Nhanh\n2. Binh thuong\n3. Cham\n";
+		cin >> chSpeed;
+	} while (chSpeed < 1 || chSpeed > 3);
 	do
 	{
 		system("cls");
@@ -93,7 +110,7 @@ void chose(int A[])
 		default:
 			break;
 		}
-	} while (ch != 13);
+	} while (ch < 1 || ch > 13);
 }
 void menu()
 {
@@ -102,7 +119,7 @@ void menu()
 	do
 	{
 		system("cls");
-		cout << "\n1.Khoi tao day so\n2.Chon thuat toan sap xep\n3.Thoat!!\n";
+		cout << "\n1.Nhap day so\n2.Chon thuat toan sap xep\n3.Thoat!!\n";
 		cin >> ch;
 		switch (ch)
 		{
@@ -110,6 +127,11 @@ void menu()
 			input(A);
 			break;
 		case 2:
+			if (arrCount == 0) {
+				cout << "Mang rong!!!" << endl;
+				system("pause");
+				continue;
+			}
 			chose(A);
 			break;
 		default:

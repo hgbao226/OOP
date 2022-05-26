@@ -4,10 +4,10 @@
 #include <string>
 #include <cstdlib>
 #include <time.h>
-#include <vector>
 #include <Windows.h>
+static int arrCount = 0;
+static int speed = 0;
 using namespace std;
-
 //1
 void SelectionSort(int A[], int n);
 void SelectionSortDE(int A[], int n);
@@ -52,9 +52,9 @@ void MergeSort(int A[], int n);
 
 
 
-void input1(int A[], int n);//nhập trực tiếp từng số
-void input2(int A[], int n);//nhập ngẫu nhiên 
-void input3(int A[]);//nhập qua file
+void input_manual(int A[], int n);//nhập trực tiếp từng số
+void input_random(int A[], int n);//nhập ngẫu nhiên 
+void input_from_file(int A[]);//nhập qua file
 void input(int A[]);
 
 void chose(int A[]);
