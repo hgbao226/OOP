@@ -6,7 +6,7 @@ void BubbleSort(int A[], int n)
         for (int j = 0; j < n - i - 1; j++) {
             if (A[j] > A[j + 1]) {
                 swap(A[j], A[j + 1]);
-                
+                output(A);
             }
         }
     }
@@ -42,5 +42,5 @@ void Bubble_Sort(int A[], int n)
         default:
             break;
         }
-    } while (ch != 3);
+    } while (ch < 1 || ch > 2);
 }

@@ -7,6 +7,32 @@ int getMax(int A[], int n) {
 	}
 	return max;
 }
+void output(int A[]) {
+	if (speed == 1)
+		output1(A);
+	if (speed == 2)
+		output2(A);
+	if (speed == 3)
+		output3(A);
+}
+void output1(int A[]) {
+	cout << endl;
+	for (int i = 0; i < arrCount; i++)
+		cout << A[i] << " ";
+	Sleep(200);
+}
+void output2(int A[]) {
+	cout << endl;
+	for (int i = 0; i < arrCount; i++)
+		cout << A[i] << " ";
+	Sleep(500);
+}
+void output3(int A[]) {
+	cout << endl;
+	for (int i = 0; i < arrCount; i++)
+		cout << A[i] << " ";
+	Sleep(1000);
+}
 void input_manual(int A[], int n)
 {
 	for (int i = 0; i < n; i++)
@@ -82,11 +108,10 @@ void input(int A[])
 void chose(int A[])
 {
 	int ch = 0;
-	int chSpeed = 0;
 	do {
 		cout << "Chon toc do thuc hien thuat toan\n1. Nhanh\n2. Binh thuong\n3. Cham\n";
-		cin >> chSpeed;
-	} while (chSpeed < 1 || chSpeed > 3);
+		cin >> speed;
+	} while (speed < 1 || speed > 3);
 	do
 	{
 		system("cls");
@@ -107,6 +132,7 @@ void chose(int A[])
 		case 10:
 		case 11:
 		case 12:
+			Bubble_Sort(A, arrCount);
 		default:
 			break;
 		}

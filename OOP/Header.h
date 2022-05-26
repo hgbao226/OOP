@@ -6,7 +6,7 @@
 #include <time.h>
 #include <Windows.h>
 static int arrCount = 0;
-static int speed = 0;
+static int speed = 3;
 using namespace std;
 //1
 void SelectionSort(int A[], int n);
@@ -60,3 +60,8 @@ void input(int A[]);
 void chose(int A[]);
 void menu();
 int getMax(int A[], int n);//trả về giá trị max trong mảng
+void output(int A[]);
+void output1(int A[]);
+void output2(int A[]);
+void output3(int A[]);
+
