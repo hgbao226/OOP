@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -7,16 +7,25 @@
 #include <vector>
 #include <Windows.h>
 using namespace std;
+
 //1
 void SelectionSort(int A[], int n);
+void SelectionSortDE(int A[], int n);
+void Selection_Sort(int A[], int n);
 //2
-
+void InterChangeSort(int A[], int n);
+void InterChangeSortDE(int A[], int n);
+void InterChange_Sort(int A[], int n);
 //3
 void InsertionSort(int A[], int n);
+void InsertionSortDE(int A[], int n);
+void Insertion_Sort(int A[], int n);
 //4
 
 //5
 void BubbleSort(int A[], int n);
+void BubbleSortDE(int A[], int n);
+void Bubble_Sort(int A[], int n);
 //6
 
 //7
@@ -30,6 +39,9 @@ void RadixSort(int A[], int n);
 //10
 void heapify(int A[], int n, int i);
 void HeapSort(int A[], int n);
+void heapifyDE(int A[], int n, int i);
+void HeapSortDE(int A[], int n);
+void Heap_Sort(int A[], int n);
 //11
 int partition(int A[], int low, int high);
 void QuickSort(int A[], int n);
@@ -40,10 +52,9 @@ void MergeSort(int A[], int n);
 
 
 
-
 void input1(int A[], int n);//nhập trực tiếp từng số
 void input2(int A[], int n);//nhập ngẫu nhiên 
-void input3(int A[], int n);//nhập qua file
+void input3(int A[]);//nhập qua file
 void input(int A[]);
 
 void chose(int A[]);
