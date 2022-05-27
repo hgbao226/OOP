@@ -3,6 +3,8 @@
 #include <fstream>
 #include <string>
 #include <cstdlib>
+#include <stdio.h>
+#include <conio.h>
 #include <time.h>
 #include <Windows.h>
 static int arrCount = 0;
@@ -72,4 +74,4 @@ void outputFast(int A[]);
 void outputNormal(int A[]);
 void outputSlow(int A[]);
 void swap(int& a, int& b);
-
+void request();
