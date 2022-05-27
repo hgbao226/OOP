@@ -175,6 +175,11 @@ void chose(int A[])
 		case 7:
 			break;
 		case 8:
+			CountingSort(A, arrCount);
+			system("cls");
+			cout << "Mang: ";
+			output(A);
+			system("pause");
 			break;
 		case 9:
 			break;
@@ -221,6 +226,6 @@ void menu()
 			return;
 			break;
 		}
-	} while (ch != 3 || ch != 2 || ch != 1);
+	} while (ch != 3);
 
 }
