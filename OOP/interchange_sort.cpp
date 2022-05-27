@@ -7,6 +7,7 @@ void InterchangeSort(int A[], int n) {
                 swap(A[i], A[j]);
                 output(A);
             }
+            request();
         }
     }
 }
@@ -18,6 +19,7 @@ void InterchangeSortDE(int A[], int n) {
                 swap(A[i], A[j]);
                 output(A);
             }
+            request();
         }
     }
 }
