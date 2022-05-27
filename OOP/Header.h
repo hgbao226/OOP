@@ -34,11 +34,15 @@ void Shaker_Sort(int a[], int n);
 //7
 
 //8
+void Counting_Sort(int A[], int n);
 void CountingSort(int A[], int n);
+void CountingSortDE(int A[], int n);
 void CountingSort(int A[], int n, int div);
+void CountingSortDE(int A[], int n, int div);
 //9
-int getMax(int A[], int n);//lấy giá trị lớn nhất trong mảng
 void RadixSort(int A[], int n);
+void RadixSortDE(int A[], int n);
+void Radix_Sort(int A[], int n);
 //10
 void heapify(int A[], int n, int i);
 void HeapSort(int A[], int n);

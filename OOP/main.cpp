@@ -55,7 +55,7 @@ void input_manual(int A[], int n)
 		cout << A[i] << " ";
 	}
 	cout << endl;
-	Sleep(3000);
+	Sleep(1000);
 }
 void input_random(int A[], int n)
 {
@@ -69,10 +69,13 @@ void input_random(int A[], int n)
 		cout << A[i] << " ";
 	}
 	cout << endl;
-	Sleep(3000);
+	Sleep(1000);
 }
 void input_from_file(int A[])
 {
+	arrCount = 0;
+	for (int i = 0; i < 50000; i++)
+		A[i] = 0;
 	ifstream ifs("data.txt");
 	for (int i = 0;!ifs.eof(); i++)
 	{
@@ -85,7 +88,7 @@ void input_from_file(int A[])
 		cout << A[i] << " ";
 	}
 	cout << endl;
-	Sleep(3000);
+	Sleep(1000);
 }
 void input(int A[])
 {
@@ -102,12 +105,18 @@ void input(int A[])
 			system("cls");
 			cout << "Nhap so phan tu cua day: ";
 			cin >> n;
+			arrCount = 0;
+			for (int i = 0; i < n; i++)
+				A[i] = 0;
 			input_manual(A, n);
 			break;
 		case 2:
 			system("cls");
 			cout << "Nhap so phan tu cua day: ";
 			cin >> n;
+			arrCount = 0;
+			for (int i = 0; i < n; i++)
+				A[i] = 0;
 			input_random(A, n);
 			break;
 		case 3:
@@ -175,13 +184,18 @@ void chose(int A[])
 		case 7:
 			break;
 		case 8:
-			CountingSort(A, arrCount);
+			Counting_Sort(A, arrCount);
 			system("cls");
 			cout << "Mang: ";
 			output(A);
 			system("pause");
 			break;
 		case 9:
+			Radix_Sort(A, arrCount);
+			system("cls");
+			cout << "Mang: ";
+			output(A);
+			system("pause");
 			break;
 		case 10:
 			break;
