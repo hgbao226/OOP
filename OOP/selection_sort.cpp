@@ -13,8 +13,6 @@ void SelectionSort(int A[], int n)
         swap(A[i], A[min]);
         output(A);
     }
-    cout << "Mang sau khi sap xep: ";
-    output(A);
 }
 void SelectionSortDE(int A[], int n)
 {
@@ -29,26 +27,20 @@ void SelectionSortDE(int A[], int n)
         swap(A[i], A[max]);
         output(A);
     }
-    cout << "Mang sau khi sap xep: ";
-    output(A);
 }
 void Selection_Sort(int A[], int n)
 {
-    int ch;
+    system("cls");
+    int ch = 0;
     do
     {
-        cout << "\n1.Sap xep tang dan\n2.Sap xep giam dan\n3.Quay lai!\n";
+        cout << "1. Sap xep tang dan\n2. Sap xep giam dan\n3. Quay lai!\n";
         cin >> ch;
-        switch (ch)
-        {
-        case 1:
+        if (ch == 1)
             SelectionSort(A, n);
-            break;
-        case 2:
+        if (ch == 2)
             SelectionSortDE(A, n);
-            break;
-        default:
-            break;
-        }
-    } while (ch != 3);
+        if (ch == 3)
+            return;
+    } while (ch != 1 && ch != 2 && ch != 3);
 }

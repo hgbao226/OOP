@@ -1,4 +1,10 @@
 ﻿#include "Header.h"
+
+void swap(int& a, int& b) {
+	int x = a;
+	a = b;
+	b = x;
+}
 int getMax(int A[], int n) {
 	int max = A[0];
 	for (int i = 0; i < n; i++) {
@@ -17,24 +23,21 @@ void output(int A[]) {
 }
 void outputFast(int A[]) {
 	system("cls");
-	cout << endl;
-	cout << "Mang dang duoc sap xep: ";
+	cout << "Mang: ";
 	for (int i = 0; i < arrCount; i++)
 		cout << A[i] << " ";
 	Sleep(100);
 }
 void outputNormal(int A[]) {
 	system("cls");
-	cout << endl;
-	cout << "Mang dang duoc sap xep: ";
+	cout << "Mang: ";
 	for (int i = 0; i < arrCount; i++)
 		cout << A[i] << " ";
 	Sleep(500);
 }
 void outputSlow(int A[]) {
 	system("cls");
-	cout << endl;
-	cout << "Mang dang duoc sap xep: ";
+	cout << "Mang: ";
 	for (int i = 0; i < arrCount; i++)
 		cout << A[i] << " ";
 	Sleep(1000);
@@ -58,7 +61,7 @@ void input_random(int A[], int n)
 {
 	for (int i = 0; i < n; i++)
 	{
-		A[i] = rand() % 100000 + 0;
+		A[i] = rand() % 1000 + 0;
 		arrCount++;
 	}
 	cout << "Mang da nhap: ";
@@ -77,6 +80,7 @@ void input_from_file(int A[])
 		arrCount++;
 	}
 	ifs.close();
+	cout << "Mang da nhap: ";
 	for (int i = 0; i < arrCount; i++) {
 		cout << A[i] << " ";
 	}
@@ -90,21 +94,24 @@ void input(int A[])
 	do
 	{
 		system("cls");
-		cout << "\n1. Nhap truc tiep tung phan tu\n2. Nhap ngau nhien\n3. Nhap qua file\n4. Quay lai!\n";
+		cout << "1. Nhap truc tiep tung phan tu\n2. Nhap ngau nhien\n3. Nhap qua file\n4. Quay lai!\n";
 		cin >> ch;
 		switch (ch)
 		{
 		case 1:
+			system("cls");
 			cout << "Nhap so phan tu cua day: ";
 			cin >> n;
 			input_manual(A, n);
 			break;
 		case 2:
+			system("cls");
 			cout << "Nhap so phan tu cua day: ";
 			cin >> n;
 			input_random(A, n);
 			break;
 		case 3:
+			system("cls");
 			input_from_file(A);
 			break;
 		default:
@@ -116,24 +123,35 @@ void chose(int A[])
 {
 	int ch = 0;
 	do {
+		system("cls");
 		cout << "Chon toc do thuc hien thuat toan\n1. Nhanh\n2. Binh thuong\n3. Cham\n";
 		cin >> speed;
 	} while (speed < 1 || speed > 3);
 	do
 	{
 		system("cls");
-		cout << "\n1. Selection Sort\n2. InterchangeSort\n3. InsertionSort\n4. Binary Insersion Sort\n5. Bubble Sort\n6. Shaker Sort\n7. Shell Sort\n8. Counting Sort\n9. Radix Sort\n10. Heap Sort\n11. Quick Sort\n12. Merge Sort\n13. Quay lai\n";
+		cout << "1. Selection Sort\n2. Interchange Sort\n3. Insertion Sort\n4. Binary Insersion Sort\n5. Bubble Sort\n6. Shaker Sort\n7. Shell Sort\n8. Counting Sort\n9. Radix Sort\n10. Heap Sort\n11. Quick Sort\n12. Merge Sort\n13. Quay lai\n";
 		cin >> ch;
 		switch (ch)
 		{
 		case 1:
+			Selection_Sort(A, arrCount);
+			system("cls");
+			cout << "Mang: ";
+			output(A);
+			system("pause");
 			break;
 		case 2:
+			Interchange_Sort(A, arrCount);
+			system("cls");
+			cout << "Mang: ";
+			output(A);
+			system("pause");
 			break;
 		case 3:
 			Insertion_Sort(A, arrCount);
 			system("cls");
-			cout << "Mang da duoc sap xep: ";
+			cout << "Mang: ";
 			output(A);
 			system("pause");
 			break;
@@ -142,11 +160,17 @@ void chose(int A[])
 		case 5:
 			Bubble_Sort(A, arrCount);
 			system("cls");
-			cout << "Mang da duoc sap xep: ";
+			cout << "Mang: ";
 			output(A);
 			system("pause");
 			break;
 		case 6:
+			Shaker_Sort(A, arrCount);
+			system("cls");
+			cout << "Mang: ";
+			output(A);
+			system("pause");
+			break;
 			break;
 		case 7:
 			break;
@@ -161,7 +185,7 @@ void chose(int A[])
 		case 12:
 			MergeSort(A, arrCount);
 			system("cls");
-			cout << "Mang da duoc sap xep: ";
+			cout << "Mang: ";
 			output(A);
 			system("pause");
 			break;
@@ -178,7 +202,7 @@ void menu()
 	do
 	{
 		system("cls");
-		cout << "\n1. Nhap day so\n2. Chon thuat toan sap xep\n3. Thoat!!\n";
+		cout << "1. Nhap day so\n2. Chon thuat toan sap xep\n3. Thoat!!\n";
 		cin >> ch;
 		switch (ch)
 		{

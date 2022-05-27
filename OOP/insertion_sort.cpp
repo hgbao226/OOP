@@ -37,21 +37,17 @@ void InsertionSortDE(int A[], int n)
 
 void Insertion_Sort(int A[], int n)
 {
-    int ch;
+    system("cls");
+    int ch = 0;
     do
     {
-        cout << "\n1.Sap xep tang dan\n2.Sap xep giam dan\n3.Quay lai!\n";
+        cout << "1. Sap xep tang dan\n2. Sap xep giam dan\n3. Quay lai!\n";
         cin >> ch;
-        switch (ch)
-        {
-        case 1:
+        if (ch == 1)
             InsertionSort(A, n);
-            break;
-        case 2:
+        if (ch == 2)
             InsertionSortDE(A, n);
-            break;
-        default:
-            break;
-        }
-    } while (ch != 3);
+        if (ch == 3)
+            return;
+    } while (ch != 1 && ch != 2 && ch != 3);
 }

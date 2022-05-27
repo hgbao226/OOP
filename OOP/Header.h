@@ -13,9 +13,9 @@ void SelectionSort(int A[], int n);
 void SelectionSortDE(int A[], int n);
 void Selection_Sort(int A[], int n);
 //2
-void InterChangeSort(int A[], int n);
-void InterChangeSortDE(int A[], int n);
-void InterChange_Sort(int A[], int n);
+void InterchangeSort(int arr[], int n);
+void InterchangeSortDE(int arr[], int n);
+void Interchange_Sort(int A[], int n);
 //3
 void InsertionSort(int A[], int n);
 void InsertionSortDE(int A[], int n);
@@ -27,6 +27,9 @@ void BubbleSort(int A[], int n);
 void BubbleSortDE(int A[], int n);
 void Bubble_Sort(int A[], int n);
 //6
+void ShakerSort(int a[], int n);
+void ShakerSortDE(int a[], int n);
+void Shaker_Sort(int a[], int n);
 
 //7
 
@@ -64,4 +67,5 @@ void output(int A[]);
 void outputFast(int A[]);
 void outputNormal(int A[]);
 void outputSlow(int A[]);
+void swap(int& a, int& b);
 

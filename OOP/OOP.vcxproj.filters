@@ -42,7 +42,13 @@
     <ClCompile Include="selection_sort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source.cpp">
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="interchange_sort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shaker_sort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
