@@ -61,7 +61,7 @@ void chose(int A[]);
 void menu();
 int getMax(int A[], int n);//trả về giá trị max trong mảng
 void output(int A[]);
-void output1(int A[]);
-void output2(int A[]);
-void output3(int A[]);
+void outputFast(int A[]);
+void outputNormal(int A[]);
+void outputSlow(int A[]);
 

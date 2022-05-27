@@ -14,6 +14,7 @@ void InsertionSort(int A[], int n)
             j--;
         }
         A[j + 1] = p;
+        output(A);
     }
 }
 void InsertionSortDE(int A[], int n)
@@ -30,6 +31,7 @@ void InsertionSortDE(int A[], int n)
             j--;
         }
         A[j + 1] = p;
+        output(A);
     }
 }
 

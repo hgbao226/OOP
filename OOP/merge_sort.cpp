@@ -41,11 +41,11 @@ void MergeS(int A[], int left, int right)
         MergeS(A, left, mid);
         MergeS(A, mid + 1, right);
         Merge(A, left, mid, right);
+        output(A);
     }
 }
 
 void MergeSort(int A[], int n)
 {
-
     MergeS(A, 0, n - 1);
 }

@@ -9,26 +9,32 @@ int getMax(int A[], int n) {
 }
 void output(int A[]) {
 	if (speed == 1)
-		output1(A);
+		outputFast(A);
 	if (speed == 2)
-		output2(A);
+		outputNormal(A);
 	if (speed == 3)
-		output3(A);
+		outputSlow(A);
 }
-void output1(int A[]) {
+void outputFast(int A[]) {
+	system("cls");
 	cout << endl;
+	cout << "Mang dang duoc sap xep: ";
 	for (int i = 0; i < arrCount; i++)
 		cout << A[i] << " ";
-	Sleep(200);
+	Sleep(100);
 }
-void output2(int A[]) {
+void outputNormal(int A[]) {
+	system("cls");
 	cout << endl;
+	cout << "Mang dang duoc sap xep: ";
 	for (int i = 0; i < arrCount; i++)
 		cout << A[i] << " ";
 	Sleep(500);
 }
-void output3(int A[]) {
+void outputSlow(int A[]) {
+	system("cls");
 	cout << endl;
+	cout << "Mang dang duoc sap xep: ";
 	for (int i = 0; i < arrCount; i++)
 		cout << A[i] << " ";
 	Sleep(1000);
@@ -46,7 +52,7 @@ void input_manual(int A[], int n)
 		cout << A[i] << " ";
 	}
 	cout << endl;
-	Sleep(5000);
+	Sleep(3000);
 }
 void input_random(int A[], int n)
 {
@@ -60,7 +66,7 @@ void input_random(int A[], int n)
 		cout << A[i] << " ";
 	}
 	cout << endl;
-	Sleep(5000);
+	Sleep(3000);
 }
 void input_from_file(int A[])
 {
@@ -75,16 +81,16 @@ void input_from_file(int A[])
 		cout << A[i] << " ";
 	}
 	cout << endl;
-	Sleep(5000);
+	Sleep(3000);
 }
 void input(int A[])
 {
-	int ch;
+	int ch = 0;
 	int n;
 	do
 	{
 		system("cls");
-		cout << "\n1.Nhap truc tiep tung phan tu\n2.Nhap ngau nhien\n3.Nhap qua file\n4.Quay lai!\n";
+		cout << "\n1. Nhap truc tiep tung phan tu\n2. Nhap ngau nhien\n3. Nhap qua file\n4. Quay lai!\n";
 		cin >> ch;
 		switch (ch)
 		{
@@ -104,7 +110,7 @@ void input(int A[])
 		default:
 			break;
 		}
-	} while (ch < 1 || ch > 4);
+	} while (ch <= 0 || ch >= 5);
 }
 void chose(int A[])
 {
@@ -116,38 +122,63 @@ void chose(int A[])
 	do
 	{
 		system("cls");
-		cout << "\n1.Selection Sort\n2.InterchangeSort\n3.InsertionSort\n4.Binary Insersion Sort\n5.Bubble Sort\n6.Shaker Sort";
-		cout << "\n7.Shell Sort\n8.Counting Sort\n9.Radix Sort\n10.Heap Sort\n11.Quick Sort\n12.Merge Sort\n13.Quay lai!\n";
+		cout << "\n1. Selection Sort\n2. InterchangeSort\n3. InsertionSort\n4. Binary Insersion Sort\n5. Bubble Sort\n6. Shaker Sort\n7. Shell Sort\n8. Counting Sort\n9. Radix Sort\n10. Heap Sort\n11. Quick Sort\n12. Merge Sort\n13. Quay lai\n";
 		cin >> ch;
 		switch (ch)
 		{
 		case 1:
+			break;
 		case 2:
+			break;
 		case 3:
-		case 4:
-		case 5:
-		case 6:
-		case 7:
-		case 8:
-		case 9:
-		case 10:
-		case 11:
-		case 12:
-			Heap_Sort(A, arrCount);
+			Insertion_Sort(A, arrCount);
+			system("cls");
+			cout << "Mang da duoc sap xep: ";
 			output(A);
+			system("pause");
+			break;
+		case 4:
+			break;
+		case 5:
+			Bubble_Sort(A, arrCount);
+			system("cls");
+			cout << "Mang da duoc sap xep: ";
+			output(A);
+			system("pause");
+			break;
+		case 6:
+			break;
+		case 7:
+			break;
+		case 8:
+			break;
+		case 9:
+			break;
+		case 10:
+			break;
+		case 11:
+			break;
+		case 12:
+			MergeSort(A, arrCount);
+			system("cls");
+			cout << "Mang da duoc sap xep: ";
+			output(A);
+			system("pause");
+			break;
 		default:
+			menu();
 			break;
 		}
-	} while (ch < 1 || ch > 13);
+	} while (ch <= 0 || ch >= 14);
 }
 void menu()
 {
-	int A[50000];
-	int ch;
+	int A[50000]{};
+	int ch = 0;
 	do
 	{
 		system("cls");
-		cout << "\n1.Nhap day so\n2.Chon thuat toan sap xep\n3.Thoat!!\n";
+		cout << "\n1. Nhap day so\n2. Chon thuat toan sap xep\n3. Thoat!!\n";
 		cin >> ch;
 		switch (ch)
 		{
@@ -156,14 +187,16 @@ void menu()
 			break;
 		case 2:
 			if (arrCount == 0) {
-				cout << "Mang rong!!!" << endl;
+				cout << "!!! Mang rong !!!" << endl;
 				system("pause");
 				continue;
 			}
 			chose(A);
 			break;
 		default:
+			return;
 			break;
 		}
-	} while (ch != 3);
+	} while (ch != 3 || ch != 2 || ch != 1);
+
 }
