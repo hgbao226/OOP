@@ -42,6 +42,43 @@ void outputSlow(int A[]) {
 		cout << A[i] << " ";
 	Sleep(1000);
 }
+void request()
+{
+	bool flag = false;
+	char key;
+	if (_kbhit())
+	{
+		key = _getch();
+		if (key == 32)
+		{
+			if (flag == false)
+			{
+				cout << "\nNhan Spacebar de tiep tuc!\n";
+			}
+			flag = !flag;
+		}
+		else if (key == 27)
+		{
+			cout << "\nDang huy...";
+			Sleep(2000);
+			return;
+		}
+	}
+	if (flag)
+	{
+		char key1 = _getch();
+		if (key1 == 27)
+		{
+			Sleep(2000);
+			return;
+		}
+		else
+		{
+			Sleep(1000);
+		}
+		flag = !flag;
+	}
+}
 void input_manual(int A[], int n)
 {
 	for (int i = 0; i < n; i++)
