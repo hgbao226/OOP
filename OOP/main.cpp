@@ -235,6 +235,11 @@ void chose(int A[])
 			system("pause");
 			break;
 		case 10:
+			Heap_Sort(A, arrCount);
+			system("cls");
+			cout << "Mang: ";
+			output(A);
+			system("pause");
 			break;
 		case 11:
 			break;

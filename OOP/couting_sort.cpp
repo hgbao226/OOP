@@ -17,6 +17,7 @@ void CountingSort(int A[], int n) {
     for (int i = 0; i < n; i++) {
         A[i] = B[i];
         output(A);
+        request();
     }
 }
 void CountingSortDE(int A[], int n) {
@@ -37,6 +38,7 @@ void CountingSortDE(int A[], int n) {
     {
         A[i] = B[n-i-1];
         output(A);
+        request();
     }
 }
 

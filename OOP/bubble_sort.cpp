@@ -9,6 +9,7 @@ void BubbleSort(int A[], int n)
                 output(A);
             }
         }
+        request();
     }
 }
 void BubbleSortDE(int A[], int n)
@@ -19,6 +20,7 @@ void BubbleSortDE(int A[], int n)
                 swap(A[j], A[j + 1]);
                 output(A);
             }
+    request();
 }
 void Bubble_Sort(int A[], int n)
 {

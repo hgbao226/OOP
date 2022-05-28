@@ -2,62 +2,52 @@
 
 void heapify(int A[], int n, int i)
 {
-    int left = 2 * i + 1;
-    int right = 2 * i + 2;
-    int Max = i;
-
-    if (left < n && A[left] < A[Max])
-        Max = left;
-    if (right < n && A[left] < A[Max])
-        Max = right;
-    if (Max != i)
-    {
-        swap(A[i], A[Max]);
-        heapify(A, n, Max);
+    int max = i;
+    int l = 2 * i + 1;
+    int r = 2 * i + 2;
+    if (l < n && A[l] > A[max])
+        max = l;
+    if (r < n && A[r] > A[max])
+        max = r;
+    if (max != i) {
+        swap(A[i], A[max]);
+        heapify(A, n, max);
     }
 }
 void HeapSort(int A[], int n)
 {
     for (int i = n / 2 - 1; i >= 0; i--)
-    {
         heapify(A, n, i);
-        output(A);
-    }
-    for (int j = n - 1; j > 0; j--)
-    {
-        swap(A[j], A[0]);
-        heapify(A, j, 0);
+    for (int i = n - 1; i > 0; i--) {
+        swap(A[0], A[i]);
+        heapify(A, i, 0);
         output(A);
     }
 }
 
 void heapifyDE(int A[], int n, int i)
 {
-    int left = 2 * i + 1;
-    int right = 2 * i + 2;
-    int Min = i;
-
-    if (left < n && A[left] > A[Min])
-        Min = left;
-    if (right < n && A[left] > A[Min])
-        Min = right;
-
-    if (Min != i)
-    {
-        swap(A[i], A[Min]);
-        heapify(A, n, Min);
+    int min = i;
+    int l = 2 * i + 1;
+    int r = 2 * i + 2;
+    if (l < n && A[l] < A[min])
+        min = l;
+    if (r < n && A[r] < A[min])
+        min = r;
+    if (min != i) {
+        swap(A[i], A[min]);
+        heapifyDE(A, n, min);
     }
 }
+
 void HeapSortDE(int A[], int n)
 {
     for (int i = n / 2 - 1; i >= 0; i--)
-    {
-        heapifyDE(A, n, i);
-    }
-    for (int j = n - 1; j > 0; j--)
-    {
-        swap(A[j], A[0]);
-        heapifyDE(A, j, 0);
+        heapify(A, n, i);
+    for (int i = n - 1; i >= 0; i--) {
+        swap(A[0], A[i]);
+        heapifyDE(A, i, 0);
+        output(A);
     }
 }
 
