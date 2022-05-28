@@ -31,9 +31,17 @@ void Bubble_Sort(int A[], int n)
         cout << "1. Sap xep tang dan\n2. Sap xep giam dan\n3. Quay lai!\n";
         cin >> ch;
         if (ch == 1)
+        {
+            if (!Start())
+                return;
             BubbleSort(A, n);
+        }
         if (ch == 2)
+        {
+            if (!Start())
+                return;
             BubbleSortDE(A, n);
+        }
         if (ch == 3)
             return;
     } while (ch != 1 && ch != 2 && ch != 3);

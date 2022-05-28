@@ -1,5 +1,34 @@
 ﻿#include "Header.h"
-
+int Start()
+{
+	cout << "An phim Spacebar de bat dau, tam dung, tiep tuc\n";
+	cout << "An phim ESC de huy\n";
+	char key;
+	bool flag = true;
+	while (flag)
+	{
+		if (_kbhit())
+		{
+			key = _getch();
+			Sleep(500);
+			if (key == 32)
+			{
+				system("cls");
+				cout << "Bat dau!...\n";
+				flag = !flag;
+				Sleep(1500);
+				return 1;
+			}
+			if (key == 27)
+			{
+				system("cls");
+				cout << "Huy!...";
+				Sleep(1500);
+				return 0;
+			}
+		}
+	}
+}
 void swap(int& a, int& b) {
 	int x = a;
 	a = b;
@@ -244,7 +273,7 @@ void chose(int A[])
 		case 11:
 			break;
 		case 12:
-			MergeSort(A, arrCount);
+			Merge_Sort(A, arrCount);
 			system("cls");
 			cout << "Mang: ";
 			output(A);

@@ -51,9 +51,17 @@ void Counting_Sort(int A[], int n)
         cout << "1. Sap xep tang dan\n2. Sap xep giam dan\n3. Quay lai!\n";
         cin >> ch;
         if (ch == 1)
+        {
+            if (!Start())
+                return;
             CountingSort(A, n);
+        }
         if (ch == 2)
+        {
+            if (!Start())
+                return;
             CountingSortDE(A, n);
+        }
         if (ch == 3)
             return;
     } while (ch != 1 && ch != 2 && ch != 3);

@@ -55,9 +55,10 @@ void Heap_Sort(int A[], int n);
 int partition(int A[], int low, int high);
 void QuickSort(int A[], int n);
 //12
-void Merge(int A[], int left, int mid, int right);
-void MergeS(int A[], int left, int right);
-void MergeSort(int A[], int n);
+void MergeSortDE(int A[], int left, int mid, int right);
+void MergeSort(int A[], int left, int mid, int right);
+void MergeS(int A[], int left, int right, int ch);
+void Merge_Sort(int A[], int n);
 
 
 
@@ -75,3 +76,4 @@ void outputNormal(int A[]);
 void outputSlow(int A[]);
 void swap(int& a, int& b);
 void request();
+int Start();
